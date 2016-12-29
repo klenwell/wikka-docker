@@ -41,18 +41,22 @@ Then install using apt:
 
 - https://docs.docker.com/engine/installation/linux/ubuntulinux/#/install-the-latest-version
 
-    # Install
-    sudo apt-get install docker-engine
+```
+# Install
+sudo apt-get install docker-engine
 
-    # Start and test
-    sudo service docker start
-    sudo docker run hello-world
+# Start and test
+sudo service docker start
+sudo docker run hello-world
+```
 
 Configure to run as non-root user:
 
 - https://docs.docker.com/engine/installation/linux/ubuntulinux/#/manage-docker-as-a-non-root-user
 
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-    # log out and log inS
-    docker run hello-world
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+# log out and log in
+docker run hello-world
+```
