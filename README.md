@@ -1,6 +1,6 @@
 # Docker LAMPs
 
-A collection of Docker LAMP images. Different versions are organized by branch. The base images was based on the following repositories:
+A collection of Docker LAMP images. Different options are organized by branch. The base image was based on the following repositories:
 
 - https://github.com/webmaestro365/lamp7xenial
 - https://github.com/tutumcloud/lamp
@@ -26,6 +26,7 @@ Test your deployment:
 	curl http://localhost/
 
 Access running container:
+
     docker ps
     docker exec -it <CONTAINER ID> /bin/bash
 
