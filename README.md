@@ -23,7 +23,7 @@ Run the image as a container (binding the webserver to localhost port 5080):
 
 Test your deployment:
 
-	curl http://localhost/
+	curl http://localhost:5080/
 
 Access running container:
 
