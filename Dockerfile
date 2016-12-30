@@ -25,6 +25,7 @@ RUN apt-get -y update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     supervisor \
     git \
+    less \
     vim \
     apache2 \
     mysql-server \
@@ -71,9 +72,10 @@ ENV PHP_POST_MAX_SIZE 10M
 #
 # Application
 #
-RUN mv /var/www/html/index.html /var/www/html/ubuntu.html
-ADD app/index.php /var/www/html/index.php
-ADD app/favicon.ico /var/www/html/favicon.ico
+ADD app /app
+RUN mv /var/www/html/index.html /app/ubuntu.html
+RUN rm -fr /var/www/html
+RUN ln -s /app /var/www/html
 
 #
 # Container Interface
