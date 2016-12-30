@@ -5,6 +5,10 @@ A collection of Docker LAMP images. Different options are organized by branch. T
 - https://github.com/webmaestro365/lamp7xenial
 - https://github.com/tutumcloud/lamp
 
+The base image is available on Docker Hub:
+
+- https://hub.docker.com/r/klenwell/klenwell-lamp/
+
 
 ## Usage
 
