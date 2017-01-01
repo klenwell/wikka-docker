@@ -1,9 +1,12 @@
-# Docker LAMPs
+# Docker LAMPs: Wikka 1.4.0
 
-A collection of Docker LAMP images. Different options are organized by branch. The base image was based on the following repositories:
+A Docker image building a LAMP server running version 1.4.0 of [WikkaWiki](https://github.com/wikkawik/WikkaWiki).
 
-- https://github.com/webmaestro365/lamp7xenial
-- https://github.com/tutumcloud/lamp
+The base image is available on Docker Hub:
+
+- https://hub.docker.com/r/klenwell/klenwell-lamp/
+
+**Please note: This image is designed only to be run locally as a development tool. It is not safe for production release.**
 
 
 ## Usage
@@ -12,14 +15,15 @@ Clone this repository:
 
     git clone git@github.com:klenwell/docker-lamps.git
     cd docker-lamps
+    git checkout wikka-1.4.0
 
 Build the image:
 
-    docker build -t klenwell-lamp .
+    docker build -t wikka-1.4.0 .
 
 Run the image as a container (binding the webserver to localhost port 5080):
 
-    docker run -d -p 5080:80 -p 5306:3306 klenwell-lamp
+    docker run -d -p 5080:80 -p 5306:3306 wikka-1.4.0
 
 Test your deployment:
 
@@ -29,34 +33,3 @@ Access running container:
 
     docker ps
     docker exec -it <CONTAINER ID> /bin/bash
-
-
-## Docker Installation (Ubuntu)
-
-First, update apt and install necessary Ubuntu packages:
-
-- https://docs.docker.com/engine/installation/linux/ubuntulinux/
-
-Then install using apt:
-
-- https://docs.docker.com/engine/installation/linux/ubuntulinux/#/install-the-latest-version
-
-```
-# Install
-sudo apt-get install docker-engine
-
-# Start and test
-sudo service docker start
-sudo docker run hello-world
-```
-
-Configure to run as non-root user:
-
-- https://docs.docker.com/engine/installation/linux/ubuntulinux/#/manage-docker-as-a-non-root-user
-
-```
-sudo groupadd docker
-sudo usermod -aG docker $USER
-# log out and log in
-docker run hello-world
-```
