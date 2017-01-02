@@ -6,7 +6,7 @@ The base image is available on Docker Hub:
 
 - https://hub.docker.com/r/klenwell/klenwell-lamp/
 
-This repository is a clone of [Docker LAMPs](https://github.com/klenwell/docker-lamps) and inspired by [dockerWikkaDemo](https://github.com/pepitosoft/dockerWikkaDemo).
+This repository is an extension of [Docker LAMPs](https://github.com/klenwell/docker-lamps) and inspired by [dockerWikkaDemo](https://github.com/pepitosoft/dockerWikkaDemo).
 
 **Please note: This image is designed only to be run locally as a development tool. It is not safe for production release.**
 
