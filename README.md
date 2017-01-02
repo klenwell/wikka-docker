@@ -1,4 +1,4 @@
-# Docker LAMPs: Wikka 1.4.0
+# Wikka Docker
 
 A Docker image building a LAMP server running version 1.4.0 of [WikkaWiki](https://github.com/wikkawik/WikkaWiki).
 
